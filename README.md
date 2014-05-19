@@ -1,7 +1,7 @@
 NodeFIX
 =======
 
-NodeJS FIX protocol message constructor and parser
+NodeJS FIX protocol message builder and parser
 
 
 a connection and message exchange example is included in this repo, the example subscribes to a symbol quotes, You can subscribe to multiple symbols if you wish by sending multiple messages, groups in message is not supported yet, but can parse messages even when it contains groups.
