@@ -7,7 +7,12 @@ NodeJS FIX protocol message builder and parser
 a connection and message exchange example is included in this repo, the example subscribes to a symbol quotes, You can subscribe to multiple symbols if you wish by sending multiple messages, groups in message is not supported yet, but can parse messages even when it contains groups.
 
 
-The following is a sample response from the FIX server after running the included example:
+After running the included example, the FIX server will push to you quotes in a FIX message like the following
+
+```
+8=FIX.4.4|9=166|35=W|49=LMXBDM|56=Amaroks|34=3|52=20140519-10:36:00.408|262=EURUSD|48=4001|22=8|268=2|269=0|270=1.37186|271=50|272=20140519|273=10:36:00.320|269=1|270=1.37188|271=50|10=140|
+```
+and using the Fix.read() method parses the above FIX message and transform it into a javascript object like the following
 
 ```
 { BeginString: 'FIX.4.4',
